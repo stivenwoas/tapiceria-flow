@@ -11,7 +11,9 @@ body {
   justify-content: start;
   color: rgb(219, 207, 207);
   background-color: rgb(57, 54, 54);
-  height: 800px;
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
   background-image: url(./portada.png);
   background-size: cover;
@@ -25,32 +27,29 @@ h1 {
 }
 
 .logo {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  margin-top: 300px;
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
 }
 
 button {
-  position: absolute;
+  display: block;
+  margin: 40px auto 0;
   font-weight: bold;
-  text-shadow: 5px 5px 10px black;
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  margin-top: 550px;
-  margin-left: -50px;
-  width: 120px;
-  height: 60px;
-  border: 3px 3px 3em;
-  border-radius: 50px;
+  text-shadow: 2px 2px 5px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  -webkit-box-reflect: below 5px
-    linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
+  -webkit-box-reflect: below 5px linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 button:hover {
@@ -121,12 +120,11 @@ footer {
   }
 }
 
-/* ✅ ESTILOS RESPONSIVOS para celulares y pantallas pequeñas */
+/* ✅ ESTILOS RESPONSIVOS */
 @media (max-width: 768px) {
   .principal {
     background-position: center;
     background-size: cover;
-    height: auto;
     padding: 20px;
   }
 
@@ -135,16 +133,12 @@ footer {
   }
 
   .logo {
-    position: static;
     width: 80px;
     height: 80px;
     margin: 20px auto;
   }
 
   button {
-    position: static;
-    margin: 20px auto;
-    display: block;
     width: 80%;
     font-size: 16px;
   }
@@ -163,6 +157,11 @@ footer {
   .galeria img {
     width: 100% !important;
     height: auto;
+  }
+
+  .galeria img:hover {
+    width: 100% !important;
+    filter: brightness(100%);
   }
 
   .imge {
